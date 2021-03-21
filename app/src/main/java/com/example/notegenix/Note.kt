@@ -8,5 +8,5 @@ import androidx.room.PrimaryKey
 //we create a table
 @Entity(tableName = "notes_table")
 class Note(@ColumnInfo(name = "text")val text:String) {
-    @PrimaryKey(autoGenerate = true) val id = 0
+    @PrimaryKey(autoGenerate = true) var id = 0
 }
