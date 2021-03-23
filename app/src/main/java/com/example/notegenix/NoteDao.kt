@@ -17,5 +17,5 @@ interface NoteDao {
     suspend fun delete(note: Note)
 
     @Query("Select * from notes_table order by id")
-    fun getAllNotes(): LiveData<List<Note>>  //observe database changes
+    fun getAllNotes(): LiveData<List<Note>>  /* observe database changes */
 }

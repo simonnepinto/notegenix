@@ -10,12 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), INotesRVAdapter {
-    override fun onItemClicked(note: Note) {
-        viewModel.deleteNote(note)
-        Toast.makeText(this, "${note.text} deleted", Toast.LENGTH_LONG).show()
-    }
-
-    lateinit var viewModel: NoteViewModel
+    private lateinit var viewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,20 +23,22 @@ class MainActivity : AppCompatActivity(), INotesRVAdapter {
         viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(NoteViewModel::class.java)
 
         viewModel.allNotes.observe(this, Observer {list->
-            list ?. let{
+            list?.let{
                 adapter.updateList(it)  //update only when list is not null
             }
         })
+    }
 
-
+    override fun onItemClicked(note: Note) {
+        viewModel.deleteNote(note)
+        Toast.makeText(this, "${note.text} deleted", Toast.LENGTH_LONG).show()
     }
 
     fun submitData(view: View) {
         val noteText = input.text.toString()
         if(noteText.isNotEmpty()){
             viewModel.insertNote(Note(noteText))
+            Toast.makeText(this, "$noteText inserted", Toast.LENGTH_LONG).show()
         }
-        Toast.makeText(this, "$noteText inserted", Toast.LENGTH_LONG).show()
-
     }
 }
