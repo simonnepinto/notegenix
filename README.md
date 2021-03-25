@@ -49,7 +49,7 @@ This command  will copy the entire project to your local environment
 
 
 ## Demo 🛠️
-|<img src="https://user-images.githubusercontent.com/53074235/112447042-de4a4a00-8d76-11eb-94d8-9f0e4e75979f.png" width="100%" height="200px"> | <img src="https://user-images.githubusercontent.com/53074235/112447054-e1453a80-8d76-11eb-83ee-973b882cf235.png" width="100%" height="200px">|
+|<img src="" width="100%" > | <img src="" width="100%">|
 |:-------------------------:|:-------------------------:|
-|<img src="https://user-images.githubusercontent.com/53074235/112447062-e4402b00-8d76-11eb-94a2-4248bfc93167.png" width="100%">| <img src="https://user-images.githubusercontent.com/53074235/112447071-e6a28500-8d76-11eb-98e4-b565c3fb1b28.png" width="100%">|
+|<img src="" width="100%">| <img src="" width="100%">|
 
