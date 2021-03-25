@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Notegenix</string>
     <string name="add_word">add</string>
+    <string name="back_button">back_button</string>
 </resources>
