@@ -2,10 +2,10 @@ package com.example.notegenix
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_new_note.*
 
@@ -36,5 +36,15 @@ class NewNoteActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+    }
+
+    fun shareImage(view: View) {
+        val sharingIntent = Intent(Intent.ACTION_SEND)
+        sharingIntent.type = "text/plain"
+        val shareBody = "Share this using"
+        val shareSub = "Checkout this note"
+        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub)
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+        startActivity(Intent.createChooser(sharingIntent, "Share using"))
     }
 }
