@@ -11,7 +11,7 @@
 Notegenix is an android application that implements the MVVM architecture to allow users to generate and share their notes. 
 
 <p align="center">
-<img src="![image](https://user-images.githubusercontent.com/53074235/113596219-9c16e780-9657-11eb-831d-dfa1c63b1989.png)">
+<img src="![White Simple Photo Quotes Book Literature Facebook Cover (2)](https://user-images.githubusercontent.com/53074235/113597007-b2717300-9658-11eb-8bab-11991613ae9b.png)">
 </p>
 
 It provides a database-driven note taking experience where the data is stored in a SQLite database using Room architecture components. The LiveData is then fetched from the ViewModel and loaded into a Recycler View.
