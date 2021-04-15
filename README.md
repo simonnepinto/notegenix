@@ -6,7 +6,6 @@
 <img src="https://img.shields.io/badge/Made%20with-Kotlin-1f425f.svg">
 </p>
 
-
 ## Overview :memo:
 Notegenix is an android application that implements the MVVM architecture to allow users to generate and share their notes. 
 
